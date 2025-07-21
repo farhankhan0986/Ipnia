@@ -196,6 +196,9 @@ const Index = () => {
               <br />
               <span className="text-foreground">In Just Three Months</span>
             </h1>
+            <div className="text-xl md:text-2xl font-serif italic font-semibold mb-6 fade-in-up stagger-1 text-primary/80">
+              &quot;Education equals execution&quot;
+            </div>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto fade-in-up stagger-2">
               Choose your path: Indian Industry Immersion or Global Exposure with on-site internships, 
               accommodation & meals, plus lifetime access to your AI Course.
@@ -244,7 +247,7 @@ const Index = () => {
           </div>
 
           {/* Feature Icons */}
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             <div className="text-center fade-in-up stagger-1">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                 <Building className="h-8 w-8 text-primary" />
@@ -253,29 +256,23 @@ const Index = () => {
             </div>
             <div className="text-center fade-in-up stagger-2">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
-                <Target className="h-8 w-8 text-primary" />
-              </div>
-              <p className="text-sm font-medium">Meals Provided</p>
-            </div>
-            <div className="text-center fade-in-up stagger-3">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                 <Brain className="h-8 w-8 text-primary" />
               </div>
               <p className="text-sm font-medium">Industry Projects</p>
             </div>
-            <div className="text-center fade-in-up stagger-4">
+            <div className="text-center fade-in-up stagger-3">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                 <Award className="h-8 w-8 text-primary" />
               </div>
               <p className="text-sm font-medium">Certificate + LOR</p>
             </div>
-            <div className="text-center fade-in-up stagger-5">
+            <div className="text-center fade-in-up stagger-4">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <p className="text-sm font-medium">Internships at Reputed Companies</p>
             </div>
-            <div className="text-center fade-in-up stagger-6">
+            <div className="text-center fade-in-up stagger-5">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                 <Book className="h-8 w-8 text-primary" />
               </div>
@@ -309,9 +306,9 @@ const Index = () => {
                 <CardDescription>2-month program</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">General AI Tools (Month 1)</span></div>
-                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Online internship (1 month)</span></div>
+                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Online internship</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Free lifetime course access</span></div>
+                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">All online program features</span></div>
                 <Button className="w-full mt-6" onClick={() => {
                   const paymentPath = "/payment/ai-course";
                   if (!user) {
@@ -330,14 +327,12 @@ const Index = () => {
                 <CardDescription>Complete 3-month AI training</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">General AI Tools (Month 1)</span></div>
-                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Domain-specific training (Month 2)</span></div>
-                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">On-site internship with accommodation & meals</span></div>
+                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Domain-specific training</span></div>
+                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">On-site internship with accommodation</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Free lifetime course access</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Industry mentorship & evaluation</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Certificate + Letter of Recommendation</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Internships at Reputed Companies</span></div>
-                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Personalized Training</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Delhi industry immersion final week</span></div>
                 <Button className="w-full mt-6" variant="outline" onClick={() => {
                   const paymentPath = "/payment/ml-course";
@@ -354,7 +349,7 @@ const Index = () => {
               <CardHeader className="text-center">
                 <CardTitle className="text-xl mb-2">Global Industry Exposure</CardTitle>
                 <div className="text-4xl font-bold text-primary mb-2">₹24,999</div>
-                <CardDescription>All India Program features</CardDescription>
+                <CardDescription>Complete training</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">All India Program features</span></div>
@@ -364,7 +359,6 @@ const Index = () => {
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Global networking & mentorship</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Visa & logistics support provided</span></div>
                 <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">International Internships at Reputed Companies</span></div>
-                <div className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span className="text-sm">Enhanced Personalized Training</span></div>
                 <Button className="w-full mt-6" variant="outline" onClick={() => {
                   const paymentPath = "/payment/global-course";
                   if (!user) {
