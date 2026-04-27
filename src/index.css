@@ -9,62 +9,86 @@
 ================================= */
 @layer base {
   :root {
+    /* Flat Design System - Light Mode */
     /* Main Background & Text */
-    --background: 38 100% 96%; /* #FFF8EC - Soft Cream */
-    --foreground: 0 3% 17%; /* #2d2a2a - Deep Grey */
+    --background: 0 0% 100%; /* #FFFFFF - Pure White */
+    --foreground: 217 33% 17%; /* #111827 - Gray 900 */
     
     /* Surface / Card / Borders */
-    --card: 0 0% 100%; /* #ffffff */
-    --card-foreground: 0 3% 17%;
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 217 33% 17%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 3% 17%;
-    --border: 40 28% 87%; /* #e8e2d6 */
-    --input: 42 71% 97%; /* #fdfaf3 */
+    --popover-foreground: 217 33% 17%;
+    --border: 210 40% 96%; /* #E5E7EB - Gray 200 */
+    --input: 0 0% 100%;
     
-    /* Primary Branding (Buttons) */
-    --primary: 0 0% 12%; /* #1e1e1e */
-    --primary-foreground: 38 100% 96%; /* #FFF8EC */
-    --secondary: 40 28% 87%; /* Derived from border */
-    --secondary-foreground: 0 3% 17%;
-    --accent: 32 95% 44%; /* #d97706 - Amber/Orange */
-    --accent-foreground: 38 100% 96%;
+    /* Primary Branding - Blue */
+    --primary: 217 91% 60%; /* #3B82F6 - Blue 500 */
+    --primary-foreground: 0 0% 100%;
+    --primary-50: 217 100% 97%; /* #EFF6FF */
+    --primary-100: 214 95% 93%; /* #DBEAFE */
+    --primary-600: 221 83% 53%; /* #2563EB */
+    
+    /* Secondary - Emerald */
+    --secondary: 160 84% 39%; /* #10B981 - Emerald 500 */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-50: 166 100% 97%; /* #F0FDF4 */
+    --secondary-400: 152 71% 40%; /* #34D399 */
+    
+    /* Accent - Amber */
+    --accent: 45 96% 56%; /* #F59E0B - Amber 500 */
+    --accent-foreground: 0 0% 100%;
+    --accent-50: 48 100% 97%; /* #FFFBEB */
+    --accent-400: 44 97% 58%; /* #FBBF24 */
     
     /* Semantic Colors */
-    --muted: 26 6% 46%; /* #7c746e */
-    --muted-foreground: 26 6% 46%;
+    --muted: 217 13% 33%; /* #6B7280 - Gray 500 */
+    --muted-foreground: 217 13% 33%;
     --destructive: 0 84% 60%; /* Red default */
     --destructive-foreground: 0 0% 100%;
-    --ring: 32 95% 44%; /* Match accent */
-    --radius: 0.75rem;
+    --ring: 217 91% 60%; /* Match primary */
+    --radius: 0.5rem;
   }
 
   .dark {
+    /* Flat Design System - Dark Mode */
     /* Main Background & Text */
-    --background: 0 4% 26%; /* #454040 - Dark Grey */
-    --foreground: 38 100% 96%; /* #FFF8EC - Cream Text */
+    --background: 217 33% 17%; /* #1F2937 - Gray 800 */
+    --foreground: 210 40% 98%; /* #F9FAFB - Gray 50 */
     
     /* Surface / Card / Borders */
-    --card: 0 4% 22%; /* #3b3636 */
-    --card-foreground: 38 100% 96%;
-    --popover: 0 4% 22%;
-    --popover-foreground: 38 100% 96%;
-    --border: 0 3% 33%; /* #565151 */
-    --input: 0 3% 29%; /* #4d4848 */
+    --card: 217 25% 21%; /* #2D3748 - Gray 700 */
+    --card-foreground: 210 40% 98%;
+    --popover: 217 25% 21%;
+    --popover-foreground: 210 40% 98%;
+    --border: 217 17% 28%; /* #4B5563 - Gray 600 */
+    --input: 217 17% 28%;
     
-    /* Primary Branding (Buttons) */
-    --primary: 38 100% 96%; /* #FFF8EC */
-    --primary-foreground: 0 4% 26%; /* #454040 */
-    --secondary: 0 3% 33%; /* Derived from border */
-    --secondary-foreground: 38 100% 96%;
-    --accent: 46 97% 65%; /* #fcd34d - Lighter Amber */
-    --accent-foreground: 0 4% 26%;
+    /* Primary Branding - Blue (lighter for contrast) */
+    --primary: 217 98% 61%; /* #60A5FA - Blue 400 */
+    --primary-foreground: 217 33% 17%;
+    --primary-50: 217 91% 50%; /* #3B82F6 */
+    --primary-100: 221 83% 53%; /* #2563EB */
+    --primary-600: 217 98% 61%; /* #60A5FA */
+    
+    /* Secondary - Emerald (lighter) */
+    --secondary: 160 84% 39%; /* #34D399 - Emerald 400 */
+    --secondary-foreground: 217 33% 17%;
+    --secondary-50: 160 84% 39%; /* #34D399 */
+    --secondary-400: 168 85% 49%; /* #6EE7B7 */
+    
+    /* Accent - Amber (lighter) */
+    --accent: 44 97% 58%; /* #FBBF24 - Amber 400 */
+    --accent-foreground: 217 33% 17%;
+    --accent-50: 48 100% 97%; /* #FFFBEB */
+    --accent-400: 44 97% 65%; /* #FCD34D */
     
     /* Semantic Colors */
-    --muted: 30 10% 68%; /* #b5ada5 */
-    --muted-foreground: 30 10% 68%;
-    --destructive: 0 62% 30%; /* Dark red */
-    --destructive-foreground: 38 100% 96%;
-    --ring: 46 97% 65%; /* Match accent */
+    --muted: 210 40% 60%; /* #94A3B8 - Gray 400 */
+    --muted-foreground: 210 40% 60%;
+    --destructive: 0 84% 60%; /* Red */
+    --destructive-foreground: 210 40% 98%;
+    --ring: 217 98% 61%; /* Match primary */
   }
 
   * {
@@ -113,57 +137,76 @@ html{
 }
 
 /* ===============================
-   PREMIUM COMPONENTS
+   FLAT DESIGN COMPONENTS
 ================================= */
 @layer components {
 
   /* --- Cards --- */
+  .card-flat {
+    @apply rounded-md bg-card border border-border transition-all duration-200;
+  }
+  .card-flat:hover {
+    @apply scale-[1.02] bg-muted/30;
+  }
+
   .card-premium {
-    @apply relative rounded-2xl border border-border/60 bg-card shadow-premium transition-all duration-300 ease-premium;
+    @apply card-flat;
   }
   .card-premium:hover {
-    @apply shadow-premium-hover -translate-y-1;
+    @apply scale-[1.02] bg-muted/30;
   }
 
   .card-glass {
-    @apply rounded-2xl border border-white/10 bg-white/5 shadow-premium backdrop-blur-xl;
+    @apply card-flat;
   }
 
   .card-glow {
-    @apply rounded-2xl border border-primary/20 bg-card shadow-glow-sm transition-all duration-300;
+    @apply card-flat;
   }
   .card-glow:hover {
-    @apply shadow-glow border-primary/40;
+    @apply scale-[1.02];
   }
 
-  /* --- Gradient text --- */
+  /* --- Text --- */
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #fcd34d 0%, #d97706 50%, #b45309 100%);
+    @apply text-accent;
   }
   .text-gradient-warm {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    @apply text-accent;
   }
 
   /* --- Buttons --- */
+  .btn-flat {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold bg-primary text-primary-foreground transition-all duration-200 hover:scale-105 hover:bg-primary-600;
+  }
+
+  .btn-primary {
+    @apply btn-flat;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold bg-secondary text-secondary-foreground transition-all duration-200 hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold border-2 border-border bg-transparent text-foreground transition-all duration-200 hover:scale-105 hover:bg-muted/20;
+  }
+
   .btn-premium {
-    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl px-6 py-3 text-sm font-semibold text-white shadow-glow-sm transition-all duration-300 ease-premium;
-    background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%);
+    @apply btn-flat;
   }
   .btn-premium:hover {
-    @apply shadow-glow -translate-y-0.5;
-    background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+    @apply scale-105 bg-primary-600;
   }
   .btn-premium:active {
-    @apply translate-y-0;
+    @apply scale-100;
   }
 
   .btn-outline-premium {
-    @apply relative inline-flex items-center justify-center gap-2 rounded-xl border border-border/80 bg-transparent px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 ease-premium;
+    @apply btn-outline;
   }
   .btn-outline-premium:hover {
-    @apply border-primary/50 bg-primary/5 -translate-y-0.5;
+    @apply scale-105 bg-muted/20;
   }
 
   /* --- Sections --- */
@@ -176,7 +219,7 @@ html{
   }
 
   .section-label {
-    @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary;
+    @apply inline-flex items-center gap-2 rounded-full border border-primary bg-primary-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary;
   }
 
   .section-heading {
@@ -184,26 +227,32 @@ html{
   }
 
   .section-subheading {
-    @apply text-base leading-7 text-muted-foreground sm:text-lg;
+    @apply text-base leading-7 text-muted sm:text-lg;
   }
 
   /* --- Badge pill --- */
   .badge-premium {
-    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ring-1;
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
   }
   .badge-popular {
-    @apply badge-premium bg-primary text-primary-foreground ring-primary/30;
+    @apply badge-premium bg-primary text-primary-foreground;
   }
   .badge-new {
-    @apply badge-premium bg-emerald-500/10 text-emerald-600 ring-emerald-500/20 dark:text-emerald-400;
+    @apply badge-premium bg-secondary-50 text-secondary;
   }
   .badge-hot {
-    @apply badge-premium bg-amber-500/10 text-amber-600 ring-amber-500/20 dark:text-amber-400;
+    @apply badge-premium bg-accent-50 text-accent;
   }
 
   /* --- Feature icon wrapper --- */
   .icon-box {
-    @apply flex h-11 w-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary;
+    @apply flex h-11 w-11 items-center justify-center rounded-md bg-primary-50 text-primary;
+  }
+  .icon-box.secondary {
+    @apply bg-secondary-50 text-secondary;
+  }
+  .icon-box.accent {
+    @apply bg-accent-50 text-accent;
   }
 
   /* --- Progress bar --- */
@@ -213,17 +262,17 @@ html{
     left: 0;
     height: 2px;
     width: 0;
-    background: linear-gradient(90deg, #fcd34d, #d97706);
+    background: hsl(var(--primary));
     z-index: 9999;
     transition: width 0.15s ease;
   }
 
   /* --- Hover lift --- */
   .hover-lift {
-    @apply transition-all duration-300 ease-premium;
+    @apply transition-all duration-200;
   }
   .hover-lift:hover {
-    @apply -translate-y-1 shadow-premium-hover;
+    @apply scale-105;
   }
 
   /* --- Shimmer loading effect --- */
@@ -240,29 +289,26 @@ html{
 
   /* --- Glass effect --- */
   .glass {
-    @apply backdrop-blur-xl border border-white/10 bg-white/5;
-  }
-  .dark .glass {
-    @apply border-white/5 bg-white/5;
+    @apply border border-border bg-card;
   }
 
   /* --- Divider with gradient --- */
   .divider-gradient {
     height: 1px;
-    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+    background: hsl(var(--border));
   }
 
   /* --- Tool card --- */
   .tool-card {
-    @apply flex flex-col items-center gap-2 rounded-xl border border-border/60 bg-card p-4 text-center transition-all duration-200 ease-premium;
+    @apply flex flex-col items-center gap-2 rounded-md border border-border bg-card p-4 text-center transition-all duration-200;
   }
   .tool-card:hover {
-    @apply -translate-y-1 border-primary/30 bg-primary/5 shadow-card;
+    @apply scale-[1.02] bg-muted/30;
   }
 
   /* --- Timeline connector --- */
   .timeline-connector {
-    @apply absolute left-5 top-11 h-full w-px bg-gradient-to-b from-primary/40 to-transparent;
+    @apply absolute left-5 top-11 h-full w-px bg-border;
   }
 }
 

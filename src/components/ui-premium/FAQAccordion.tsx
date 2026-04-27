@@ -21,7 +21,7 @@ const FAQAccordion = ({ items, className }: FAQAccordionProps) => {
   return (
     <div
       className={cn(
-        "rounded-2xl border border-border/60 bg-card px-6 py-2 shadow-premium",
+        "rounded-md border border-border bg-card px-6 py-2",
         className
       )}
     >
@@ -32,12 +32,12 @@ const FAQAccordion = ({ items, className }: FAQAccordionProps) => {
             <AccordionItem
               key={val}
               value={val}
-              className="border-border/50"
+              className="border-border border-b-2"
             >
-              <AccordionTrigger className="text-left text-base font-medium text-foreground hover:text-primary hover:no-underline">
+              <AccordionTrigger className="text-left text-base font-medium text-foreground hover:text-primary hover:no-underline transition-colors duration-200">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="pb-4 text-sm leading-7 text-muted-foreground">
+              <AccordionContent className="pb-4 text-sm leading-7 text-muted">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
