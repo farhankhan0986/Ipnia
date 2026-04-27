@@ -54,9 +54,9 @@ const StatCard = ({ stat, start }: { stat: Stat; start: boolean }) => {
       <div className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
         {displayValue}
       </div>
-      <div className="text-sm font-medium text-muted-foreground">{stat.label}</div>
+      <div className="text-sm font-medium text-muted">{stat.label}</div>
       {stat.description && (
-        <div className="text-xs text-muted-foreground/70">{stat.description}</div>
+        <div className="text-xs text-muted/60">{stat.description}</div>
       )}
     </div>
   );
@@ -90,7 +90,7 @@ const StatsCounter = ({ stats, className, variant = "default" }: StatsCounterPro
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="card-premium p-5 text-center"
+            className="card-flat p-5 text-center hover:scale-[1.02]"
           >
             <StatCard stat={stat} start={started} />
           </div>

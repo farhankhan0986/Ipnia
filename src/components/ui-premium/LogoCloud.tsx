@@ -16,7 +16,7 @@ const LogoCloud = ({ title, logos, className }: LogoCloudProps) => {
   return (
     <div className={cn("", className)}>
       {title && (
-        <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-muted-foreground/70">
+        <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-muted">
           {title}
         </p>
       )}

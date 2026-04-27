@@ -99,8 +99,8 @@ const ToolGrid = ({ className }: ToolGridProps) => {
               className={cn(
                 "rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all duration-200",
                 activeCategory === cat
-                  ? "bg-primary text-primary-foreground shadow-glow-sm"
-                  : "bg-secondary/70 text-muted-foreground hover:bg-secondary hover:text-foreground"
+                  ? "bg-primary text-primary-foreground hover:scale-105"
+                  : "bg-muted text-foreground hover:bg-accent hover:text-foreground hover:scale-105"
               )}
             >
               {cat}
@@ -133,14 +133,14 @@ const ToolGrid = ({ className }: ToolGridProps) => {
 
       {/* Tools grid */}
       {filteredTools.length === 0 ? (
-        <div className="py-12 text-center text-muted-foreground">
+        <div className="py-12 text-center text-muted">
           No tools found. Try a different search.
         </div>
       ) : (
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
           {filteredTools.map((tool) => (
             <div key={tool.name} className="tool-card">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-border/40 bg-gradient-to-br from-secondary/80 to-secondary text-3xl transition-all duration-200 group-hover:scale-110">
+              <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-secondary-50 text-3xl transition-all duration-200 group-hover:scale-110">
                 <span role="img" aria-label={tool.name}>
                   {tool.emoji}
                 </span>
@@ -151,7 +151,7 @@ const ToolGrid = ({ className }: ToolGridProps) => {
               <span
                 className={cn(
                   "text-[10px] font-medium",
-                  categoryColors[tool.category] ?? "text-muted-foreground"
+                  categoryColors[tool.category] ?? "text-muted"
                 )}
               >
                 {tool.category}
@@ -162,7 +162,7 @@ const ToolGrid = ({ className }: ToolGridProps) => {
       )}
 
       {/* Count */}
-      <p className="text-center text-xs text-muted-foreground">
+      <p className="text-center text-xs text-muted">
         Showing {filteredTools.length} of {allTools.length}+ industry tools
       </p>
     </div>

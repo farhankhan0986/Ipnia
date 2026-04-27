@@ -66,7 +66,7 @@ const HeroSection = ({
             <Button
               size="lg"
               onClick={onPrimaryCTA}
-              className="h-12 gap-2 bg-gradient-to-r from-brand-500 to-violet-600 px-8 text-base font-semibold text-white shadow-glow-sm transition-all hover:shadow-glow hover:opacity-90"
+              className="h-12 gap-2 bg-primary px-8 text-base font-semibold text-primary-foreground transition-all duration-200 hover:scale-105 hover:bg-primary-600"
             >
               {primaryCTA}
               <ArrowRight className="h-4 w-4" />

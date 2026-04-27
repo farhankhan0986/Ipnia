@@ -40,11 +40,16 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          50: "hsl(var(--primary-50))",
+          100: "hsl(var(--primary-100))",
+          600: "hsl(var(--primary-600))",
         },
 
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          50: "hsl(var(--secondary-50))",
+          400: "hsl(var(--secondary-400))",
         },
 
         destructive: {
@@ -60,6 +65,8 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          50: "hsl(var(--accent-50))",
+          400: "hsl(var(--accent-400))",
         },
 
         popover: {
@@ -71,38 +78,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-
-        /* Premium palette */
-        brand: {
-          50: "#eef2ff",
-          100: "#e0e7ff",
-          200: "#c7d2fe",
-          300: "#a5b4fc",
-          400: "#818cf8",
-          500: "#6366f1",
-          600: "#4f46e5",
-          700: "#4338ca",
-          800: "#3730a3",
-          900: "#312e81",
-          950: "#1e1b4b",
-        },
-        violet: {
-          50: "#f5f3ff",
-          100: "#ede9fe",
-          200: "#ddd6fe",
-          300: "#c4b5fd",
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          600: "#7c3aed",
-          700: "#6d28d9",
-          800: "#5b21b6",
-          900: "#4c1d95",
-          950: "#2e1065",
-        },
-        cream: "#FFF8EC",
-        charcoal: "#454040",
-        amber: "#d97706",
-        amberLight: "#fcd34d",
       },
 
       borderRadius: {
@@ -115,24 +90,12 @@ export default {
       },
 
       boxShadow: {
-        soft: "0 4px 14px rgba(0,0,0,0.06)",
-        card: "0 8px 24px rgba(0,0,0,0.08)",
-        "card-hover": "0 20px 48px rgba(0,0,0,0.12)",
-        "glow-sm": "0 0 20px rgba(217,119,6,0.15)",
-        glow: "0 0 40px rgba(217,119,6,0.2)",
-        "glow-lg": "0 0 80px rgba(217,119,6,0.25)",
-        "inner-glow": "inset 0 1px 0 rgba(255,255,255,0.08)",
-        premium: "0 4px 6px -1px rgba(0,0,0,0.07), 0 10px 30px -5px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.03)",
-        "premium-hover": "0 8px 16px -2px rgba(0,0,0,0.1), 0 20px 48px -8px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04)",
+        none: "none",
       },
 
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%)",
-        "card-gradient": "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%)",
-        "brand-gradient": "linear-gradient(135deg, #fcd34d 0%, #d97706 50%, #b45309 100%)",
-        "premium-gradient": "linear-gradient(135deg, rgba(217,119,6,0.1) 0%, rgba(217,119,6,0.05) 100%)",
       },
 
       keyframes: {
