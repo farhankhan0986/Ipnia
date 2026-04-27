@@ -240,6 +240,8 @@
    UTILITIES
 ================================= */
 @layer utilities {
+  /* --- Background grid pattern: use for subtle section texture (e.g., hero, CTA) ---
+   * Use `.bg-dots` for a radial dot pattern, or `.bg-grid` for a square grid. */
   .bg-grid {
     background-image:
       linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),

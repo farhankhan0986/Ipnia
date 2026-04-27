@@ -20,7 +20,7 @@ const useCountUp = (target: number, duration = 2000, start = false) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!start || !target) return;
+    if (!start || target === undefined || target === null) return;
 
     let startTime: number | null = null;
     const animate = (timestamp: number) => {
