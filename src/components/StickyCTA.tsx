@@ -17,7 +17,7 @@ const StickyCTA = () => {
     <div className="fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-t border-border p-4 md:hidden">
       <Button
         onClick={scrollToSignup}
-        className="w-full h-12 text-base pulse-glow"
+        className="h-12 w-full text-base"
         size="lg"
       >
         Apply Now <ArrowRight className="ml-2 h-4 w-4" />

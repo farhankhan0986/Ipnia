@@ -138,10 +138,10 @@ const SignUp = () => {
                 placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className={errors.fullName ? 'border-red-500' : ''}
+                className={errors.fullName ? 'border-destructive' : ''}
               />
               {errors.fullName && (
-                <p className="text-sm text-red-500">{errors.fullName}</p>
+                <p className="text-sm text-destructive">{errors.fullName}</p>
               )}
             </div>
 
@@ -157,10 +157,10 @@ const SignUp = () => {
                 placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className={errors.email ? 'border-red-500' : ''}
+                className={errors.email ? 'border-destructive' : ''}
               />
               {errors.email && (
-                <p className="text-sm text-red-500">{errors.email}</p>
+                <p className="text-sm text-destructive">{errors.email}</p>
               )}
             </div>
 
@@ -177,7 +177,7 @@ const SignUp = () => {
                   placeholder="Create a strong password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={errors.password ? 'border-red-500 pr-10' : 'pr-10'}
+                  className={errors.password ? 'border-destructive pr-10' : 'pr-10'}
                 />
                 <Button
                   type="button"
@@ -194,7 +194,7 @@ const SignUp = () => {
                 </Button>
               </div>
               {errors.password && (
-                <p className="text-sm text-red-500">{errors.password}</p>
+                <p className="text-sm text-destructive">{errors.password}</p>
               )}
             </div>
 
@@ -211,7 +211,7 @@ const SignUp = () => {
                   placeholder="Confirm your password"
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
-                  className={errors.confirmPassword ? 'border-red-500 pr-10' : 'pr-10'}
+                  className={errors.confirmPassword ? 'border-destructive pr-10' : 'pr-10'}
                 />
                 <Button
                   type="button"
@@ -228,7 +228,7 @@ const SignUp = () => {
                 </Button>
               </div>
               {errors.confirmPassword && (
-                <p className="text-sm text-red-500">{errors.confirmPassword}</p>
+                <p className="text-sm text-destructive">{errors.confirmPassword}</p>
               )}
             </div>
 
@@ -247,7 +247,7 @@ const SignUp = () => {
               <Button
                 type="button"
                 variant="outline"
-                className="w-full flex items-center justify-center gap-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 mt-2"
+                className="w-full flex items-center justify-center gap-2 mt-2"
                 onClick={async () => {
                   const redirectTo = location.state?.redirectTo || '/';
                   await signInWithGoogle(redirectTo);

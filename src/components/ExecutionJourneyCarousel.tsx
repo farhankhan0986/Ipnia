@@ -78,7 +78,7 @@ export default function ExecutionJourneyCarousel() {
   }, []);
 
   return (
-    <section className="relative py-20 px-2 sm:px-4 lg:px-8 bg-gradient-to-br from-[#181A20] to-[#23263A]">
+    <section className="relative py-20 px-2 sm:px-4 lg:px-8 bg-card">
       <div className="max-w-5xl mx-auto">
         <Carousel opts={{ loop: true }}>
           <CarouselContent className="transition-all duration-500">
@@ -87,18 +87,18 @@ export default function ExecutionJourneyCarousel() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 min-h-[400px]">
                   {/* Illustration */}
                   <div className="flex-1 flex justify-center items-center">
-                    <img src={slide.illustration} alt={slide.visualAlt} className="w-[320px] h-[240px] object-contain rounded-xl shadow-lg bg-white/10" />
+                    <img src={slide.illustration} alt={slide.visualAlt} className="w-[320px] h-[240px] object-contain rounded-xl shadow-lg bg-background" />
                   </div>
                   {/* Text Content */}
                   <div className="flex-1 flex flex-col items-start md:items-start gap-4">
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{slide.headline}</h3>
-                    <p className="text-lg text-gray-200 mb-2">{slide.subtext}</p>
+                    <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2">{slide.headline}</h3>
+                    <p className="text-lg text-muted-foreground mb-2">{slide.subtext}</p>
                     <ul className="mb-4 space-y-2">
                       {slide.highlights.map((h, i) => (
-                        <li key={i} className="flex items-center text-base text-white"><CheckCircle className="text-green-400 mr-2 w-5 h-5" /> {h}</li>
+                        <li key={i} className="flex items-center text-base text-foreground"><CheckCircle className="text-primary mr-2 w-5 h-5" /> {h}</li>
                       ))}
                     </ul>
-                    <Button size="lg" className="mt-2 bg-primary text-white shadow-lg">
+                    <Button size="lg" className="mt-2">
                       {slide.cta}
                     </Button>
                   </div>
@@ -111,7 +111,7 @@ export default function ExecutionJourneyCarousel() {
             {slides.map((_, idx) => (
               <button
                 key={idx}
-                className={`w-4 h-4 rounded-full border-2 ${active === idx ? "bg-primary border-primary" : "bg-gray-700 border-gray-500"}`}
+                className={`w-4 h-4 rounded-full border-2 ${active === idx ? "bg-primary border-primary" : "bg-muted border-border"}`}
                 onClick={() => setActive(idx)}
                 aria-label={`Go to step ${idx + 1}`}
               />
@@ -119,18 +119,18 @@ export default function ExecutionJourneyCarousel() {
           </div>
           {/* Navigation Arrows */}
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 rounded-full p-2 shadow-lg z-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-card border border-border rounded-full p-2 shadow-lg z-10"
             onClick={() => setActive((active - 1 + slides.length) % slides.length)}
             aria-label="Previous step"
           >
-            <ArrowRight className="rotate-180 w-6 h-6 text-white" />
+            <ArrowRight className="rotate-180 w-6 h-6 text-foreground" />
           </button>
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 rounded-full p-2 shadow-lg z-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-card border border-border rounded-full p-2 shadow-lg z-10"
             onClick={() => setActive((active + 1) % slides.length)}
             aria-label="Next step"
           >
-            <ArrowRight className="w-6 h-6 text-white" />
+            <ArrowRight className="w-6 h-6 text-foreground" />
           </button>
         </Carousel>
       </div>

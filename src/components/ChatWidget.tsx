@@ -99,7 +99,7 @@ const ChatWidget = () => {
           className={cn(
             "h-16 w-16 rounded-full shadow-lg transition-all duration-300 hover:scale-110 p-0",
             isOpen 
-              ? "bg-red-500 hover:bg-red-600" 
+              ? "bg-muted border border-border hover:bg-muted/80" 
               : "bg-primary hover:bg-primary/90"
           )}
         >
@@ -114,12 +114,12 @@ const ChatWidget = () => {
       {/* Chat Window */}
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-50 w-96 h-[500px]">
-          <Card className="h-full shadow-2xl border-2 border-primary/20">
+          <Card className="h-full shadow-2xl border border-border">
             <CardContent className="p-0 h-full flex flex-col">
               {/* Header */}
               <div className="bg-primary text-primary-foreground p-4 rounded-t-lg">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center overflow-hidden">
+                  <div className="w-10 h-10 bg-primary-foreground/20 rounded-full flex items-center justify-center overflow-hidden">
                     <img src="/ai-logo.jpeg" alt="AI Mascot" className="h-10 w-10 object-cover rounded-full" />
                   </div>
                   <div>

@@ -120,10 +120,10 @@ const Login = () => {
                 placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className={errors.email ? 'border-red-500' : ''}
+                className={errors.email ? 'border-destructive' : ''}
               />
               {errors.email && (
-                <p className="text-sm text-red-500">{errors.email}</p>
+                <p className="text-sm text-destructive">{errors.email}</p>
               )}
             </div>
 
@@ -140,7 +140,7 @@ const Login = () => {
                   placeholder="Enter your password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={errors.password ? 'border-red-500 pr-10' : 'pr-10'}
+                  className={errors.password ? 'border-destructive pr-10' : 'pr-10'}
                 />
                 <Button
                   type="button"
@@ -157,7 +157,7 @@ const Login = () => {
                 </Button>
               </div>
               {errors.password && (
-                <p className="text-sm text-red-500">{errors.password}</p>
+                <p className="text-sm text-destructive">{errors.password}</p>
               )}
             </div>
 
@@ -176,7 +176,7 @@ const Login = () => {
               <Button
                 type="button"
                 variant="outline"
-                className="w-full flex items-center justify-center gap-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 mt-2"
+                className="w-full flex items-center justify-center gap-2 mt-2"
                 onClick={async () => {
                   const redirectTo = location.state?.redirectTo || '/';
                   await signInWithGoogle(redirectTo);

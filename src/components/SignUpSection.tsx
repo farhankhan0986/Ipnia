@@ -63,12 +63,12 @@ const SignUpSection = () => {
     return (
       <section id="signup" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
         <div className="max-w-2xl mx-auto">
-          <Card className="text-center p-8 bg-green-500/10 border-green-500/20">
+          <Card className="text-center p-8 bg-card border-border">
             <CardContent className="space-y-6">
-              <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto">
-                <CheckCircle className="h-10 w-10 text-white" />
+              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
+                <CheckCircle className="h-10 w-10 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-green-500">Success!</h3>
+              <h3 className="text-2xl font-bold text-primary">Success!</h3>
               <p className="text-lg text-muted-foreground">
                 You're one step closer to transforming your career with IPNIA.
               </p>
@@ -86,8 +86,8 @@ const SignUpSection = () => {
     <section id="signup" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Start Your <span className="hero-gradient">AI Journey</span> Today
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Start Your <span className="text-primary">AI Journey</span> Today
           </h2>
           <p className="text-xl text-muted-foreground">
             Join thousands of professionals transforming their careers with AI
@@ -107,7 +107,7 @@ const SignUpSection = () => {
               <Button
                 type="button"
                 variant="outline"
-                className="w-full flex items-center justify-center gap-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 mb-4"
+                className="w-full flex items-center justify-center gap-2 mb-4"
                 onClick={async () => {
                   await signInWithGoogle('/');
                 }}
