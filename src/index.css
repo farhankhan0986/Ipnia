@@ -9,48 +9,62 @@
 ================================= */
 @layer base {
   :root {
-    --background: 220 20% 98%;
-    --foreground: 224 30% 8%;
-    --card: 0 0% 100%;
-    --card-foreground: 224 30% 8%;
+    /* Main Background & Text */
+    --background: 38 100% 96%; /* #FFF8EC - Soft Cream */
+    --foreground: 0 3% 17%; /* #2d2a2a - Deep Grey */
+    
+    /* Surface / Card / Borders */
+    --card: 0 0% 100%; /* #ffffff */
+    --card-foreground: 0 3% 17%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 30% 8%;
-    --primary: 245 60% 55%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 18% 94%;
-    --secondary-foreground: 224 30% 12%;
-    --muted: 220 16% 92%;
-    --muted-foreground: 220 12% 42%;
-    --accent: 262 52% 58%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 50%;
+    --popover-foreground: 0 3% 17%;
+    --border: 40 28% 87%; /* #e8e2d6 */
+    --input: 42 71% 97%; /* #fdfaf3 */
+    
+    /* Primary Branding (Buttons) */
+    --primary: 0 0% 12%; /* #1e1e1e */
+    --primary-foreground: 38 100% 96%; /* #FFF8EC */
+    --secondary: 40 28% 87%; /* Derived from border */
+    --secondary-foreground: 0 3% 17%;
+    --accent: 32 95% 44%; /* #d97706 - Amber/Orange */
+    --accent-foreground: 38 100% 96%;
+    
+    /* Semantic Colors */
+    --muted: 26 6% 46%; /* #7c746e */
+    --muted-foreground: 26 6% 46%;
+    --destructive: 0 84% 60%; /* Red default */
     --destructive-foreground: 0 0% 100%;
-    --border: 220 16% 88%;
-    --input: 220 18% 94%;
-    --ring: 245 60% 55%;
+    --ring: 32 95% 44%; /* Match accent */
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 224 28% 6%;
-    --foreground: 210 20% 96%;
-    --card: 224 25% 9%;
-    --card-foreground: 210 20% 96%;
-    --popover: 224 25% 9%;
-    --popover-foreground: 210 20% 96%;
-    --primary: 245 65% 62%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 224 20% 13%;
-    --secondary-foreground: 210 20% 90%;
-    --muted: 224 20% 13%;
-    --muted-foreground: 215 16% 56%;
-    --accent: 262 55% 65%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 224 18% 16%;
-    --input: 224 22% 12%;
-    --ring: 245 65% 62%;
+    /* Main Background & Text */
+    --background: 0 4% 26%; /* #454040 - Dark Grey */
+    --foreground: 38 100% 96%; /* #FFF8EC - Cream Text */
+    
+    /* Surface / Card / Borders */
+    --card: 0 4% 22%; /* #3b3636 */
+    --card-foreground: 38 100% 96%;
+    --popover: 0 4% 22%;
+    --popover-foreground: 38 100% 96%;
+    --border: 0 3% 33%; /* #565151 */
+    --input: 0 3% 29%; /* #4d4848 */
+    
+    /* Primary Branding (Buttons) */
+    --primary: 38 100% 96%; /* #FFF8EC */
+    --primary-foreground: 0 4% 26%; /* #454040 */
+    --secondary: 0 3% 33%; /* Derived from border */
+    --secondary-foreground: 38 100% 96%;
+    --accent: 46 97% 65%; /* #fcd34d - Lighter Amber */
+    --accent-foreground: 0 4% 26%;
+    
+    /* Semantic Colors */
+    --muted: 30 10% 68%; /* #b5ada5 */
+    --muted-foreground: 30 10% 68%;
+    --destructive: 0 62% 30%; /* Dark red */
+    --destructive-foreground: 38 100% 96%;
+    --ring: 46 97% 65%; /* Match accent */
   }
 
   * {
@@ -82,6 +96,22 @@
   }
 }
 
+html{
+  
+  scroll {
+    behavior: smooth;
+  }
+  /* Custom animation for premium theme */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
+
 /* ===============================
    PREMIUM COMPONENTS
 ================================= */
@@ -109,7 +139,7 @@
   /* --- Gradient text --- */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    background-image: linear-gradient(135deg, #fcd34d 0%, #d97706 50%, #b45309 100%);
   }
   .text-gradient-warm {
     @apply bg-clip-text text-transparent;
@@ -119,11 +149,11 @@
   /* --- Buttons --- */
   .btn-premium {
     @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl px-6 py-3 text-sm font-semibold text-white shadow-glow-sm transition-all duration-300 ease-premium;
-    background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%);
   }
   .btn-premium:hover {
     @apply shadow-glow -translate-y-0.5;
-    background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%);
+    background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
   }
   .btn-premium:active {
     @apply translate-y-0;
@@ -183,7 +213,7 @@
     left: 0;
     height: 2px;
     width: 0;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    background: linear-gradient(90deg, #fcd34d, #d97706);
     z-index: 9999;
     transition: width 0.15s ease;
   }

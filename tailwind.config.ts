@@ -118,9 +118,9 @@ export default {
         soft: "0 4px 14px rgba(0,0,0,0.06)",
         card: "0 8px 24px rgba(0,0,0,0.08)",
         "card-hover": "0 20px 48px rgba(0,0,0,0.12)",
-        "glow-sm": "0 0 20px rgba(99,102,241,0.15)",
-        glow: "0 0 40px rgba(99,102,241,0.2)",
-        "glow-lg": "0 0 80px rgba(99,102,241,0.25)",
+        "glow-sm": "0 0 20px rgba(217,119,6,0.15)",
+        glow: "0 0 40px rgba(217,119,6,0.2)",
+        "glow-lg": "0 0 80px rgba(217,119,6,0.25)",
         "inner-glow": "inset 0 1px 0 rgba(255,255,255,0.08)",
         premium: "0 4px 6px -1px rgba(0,0,0,0.07), 0 10px 30px -5px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.03)",
         "premium-hover": "0 8px 16px -2px rgba(0,0,0,0.1), 0 20px 48px -8px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04)",
@@ -129,10 +129,10 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, hsl(var(--background)) 0%, hsl(224 60% 6%) 100%)",
+        "hero-gradient": "linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%)",
         "card-gradient": "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%)",
-        "brand-gradient": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%)",
-        "premium-gradient": "linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.05) 100%)",
+        "brand-gradient": "linear-gradient(135deg, #fcd34d 0%, #d97706 50%, #b45309 100%)",
+        "premium-gradient": "linear-gradient(135deg, rgba(217,119,6,0.1) 0%, rgba(217,119,6,0.05) 100%)",
       },
 
       keyframes: {
@@ -169,8 +169,8 @@ export default {
           "50%": { transform: "translateY(-12px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(99,102,241,0.1)" },
-          "50%": { boxShadow: "0 0 40px rgba(99,102,241,0.3)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(217,119,6,0.1)" },
+          "50%": { boxShadow: "0 0 40px rgba(217,119,6,0.3)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },

@@ -53,7 +53,7 @@ const HeroSection = ({
             {headlineAccent && (
               <>
                 {" "}
-                <span className="text-gradient">{headlineAccent}</span>
+                <span className="text-accent">{headlineAccent}</span>
               </>
             )}
           </h1>
