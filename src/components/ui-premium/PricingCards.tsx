@@ -38,10 +38,10 @@ const PricingCards = ({ cards, className }: PricingCardsProps) => {
         <div
           key={card.name}
           className={cn(
-            "relative flex flex-col rounded-md border p-6 transition-all duration-200",
+            "relative flex flex-col rounded-2xl border p-6 transition-all duration-300",
             card.highlighted
-              ? "border-primary bg-primary-50 hover:scale-[1.02]"
-              : "border-border bg-card hover:scale-[1.02]"
+              ? "border-primary/40 bg-gradient-to-b from-primary/5 to-card shadow-glow"
+              : "border-border/60 bg-card shadow-premium hover:shadow-premium-hover hover:-translate-y-1"
           )}
         >
           {/* Badge */}
@@ -50,8 +50,8 @@ const PricingCards = ({ cards, className }: PricingCardsProps) => {
               <span className={cn(
                 "inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold",
                 card.highlighted
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary-50 text-secondary border border-secondary/20"
+                  ? "bg-primary text-primary-foreground shadow-glow-sm"
+                  : "bg-secondary text-secondary-foreground border border-border/60"
               )}>
                 {card.highlighted && <Zap className="h-3 w-3" />}
                 {card.badge}
@@ -112,10 +112,10 @@ const PricingCards = ({ cards, className }: PricingCardsProps) => {
             onClick={card.onCTA}
             variant={card.highlighted ? "default" : "outline"}
             className={cn(
-              "w-full gap-2 transition-all duration-200",
+              "w-full gap-2",
               card.highlighted
-                ? "bg-primary text-primary-foreground hover:scale-105 hover:bg-primary-600"
-                : "hover:scale-105"
+                ? "bg-gradient-to-r from-brand-500 to-violet-600 text-white shadow-glow-sm hover:shadow-glow hover:opacity-90"
+                : ""
             )}
           >
             {card.ctaLabel}
